@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Animated Site - Notice Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html" class="logo">MySite</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="section-wrapper" style="margin-top: 4rem;">
+    <h2>Notice Board / Q&A</h2>
+    <p>
+      Have a question or announcement? Post it below! The admin can reply 
+      to your messages here.
+    </p>
+
+    <!-- DISQUS EMBED -->
+    <div class="notice-board-embed" id="disqus_thread"></div>
+    <script>
+      /**
+       * REPLACE 'YOUR_DISQUS_SHORTNAME' WITH YOUR ACTUAL SHORTNAME
+       */
+      var disqus_config = function () {
+        this.page.url = window.location.href;  // Current page URL
+        this.page.identifier = "notice-board"; // Unique identifier for this page
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js'; 
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the 
+      <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <!-- END DISQUS EMBED -->
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© <span id="year"></span> MySite. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
