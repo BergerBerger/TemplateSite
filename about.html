@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Animated Site - About</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html" class="logo">MySite</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="notice-board.html">Notice Board</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="section-wrapper" style="margin-top: 4rem;">
+    <h2>About Us</h2>
+    <p>
+      Welcome to our site! We specialize in creating highly interactive
+      web experiences, complete with animations, transitions, and more.
+    </p>
+    <p>
+      Our mission is to bring joy and efficiency to website development,
+      ensuring that each page feels alive and engaging. 
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© <span id="year"></span> MySite. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
